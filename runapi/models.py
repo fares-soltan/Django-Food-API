@@ -7,9 +7,9 @@ class Users(models.Model):
     UserEmail = models.CharField(max_length=100, null=False, blank=False)
     UserPhone = models.IntegerField()
     UserAdress = models.TextField()
-    UserInnerName = models.CharField(max_length=200, null=False, blank=False)
-    u_Admin = models.BooleanField(blank=False, default=0)
-    Staff = models.BooleanField(blank=False, default=1)
+    UserInnerName = models.CharField(max_length=200)
+    u_Admin = models.BooleanField(default=0)
+    Staff = models.BooleanField(default=1)
     UserPoints = models.IntegerField(default=0,)
 
     def __str__(self):
