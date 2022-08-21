@@ -18,13 +18,13 @@ class Users(models.Model):
 
 
 class Meals(models.Model):
-    MealName = models.CharField(max_length=200, null=False, blank=False)
-    MealCategory = models.CharField(max_length=200, null=False, blank=False)
-    MealPrice = models.IntegerField(null=False, blank=False)
-    MealDescription = models.TextField(null=False, blank=False)
-    MealImage = models.ImageField(null=True, blank=True)
-    MealCost = models.IntegerField(null=False, blank=False)
-    MealPoints = models.IntegerField(default=0,)
+    mealname = models.CharField(max_length=200, null=False, blank=False)
+    mealcategory = models.CharField(max_length=200, null=False, blank=False)
+    mealprice = models.IntegerField(null=True, blank=TRUE)
+    mealdescription = models.TextField(null=True, blank=TRUE)
+    mealimage = models.ImageField(null=True, blank=True)
+    mealcost = models.IntegerField(null=True, blank=TRUE)
+    mealpoints = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.MealName
+        return self.mealname
